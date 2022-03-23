@@ -1,0 +1,8 @@
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  color: black;
+  margin-bottom: 0.5rem;
+}
