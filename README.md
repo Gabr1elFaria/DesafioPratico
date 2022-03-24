@@ -58,3 +58,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 # npm run build fails to minify
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# API consumption
+For API consumption, the project uses the Axios HTTP client. It can be installed with the command "npm install axios".
+For other installation ways and how to use: https://www.npmjs.com/package/axios
