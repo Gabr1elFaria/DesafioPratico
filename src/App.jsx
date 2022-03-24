@@ -1,14 +1,21 @@
 import './App.css';
 
 import React from 'react';
-import Accordion from './components/Accordion';
+import MotorcyclesAccordion from './components/MotorcyclesAccordion';
+import CarsAccordion from './components/CarsAccordion';
+import TrucksAccordion from './components/TrucksAccordion';
+import Header from './components/Header';
+import Banner from  './components/Banner';
 
 
 function App() {
   return (
     <div className="App">
-      
-      <Accordion title="Carros"/>
+      <Header />
+      <Banner />
+      <MotorcyclesAccordion title="Motos"/>
+      <CarsAccordion title="Carros"/>
+      <TrucksAccordion title="Caminhões" />
       
     </div>
   );

@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Overpass+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@800&family=Overpass+Mono:wght@500&display=swap");
+
+
+.banner{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: rgb(254,254,254);
+  background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgba(232,236,242,1) 49%, rgba(223,226,245,1) 100%);
+  margin: 1rem 0rem 2.5rem 0rem;
+}
+
+.img{
+  margin-right: 6rem;
+  height: 18.75rem;
+  width: 18.75rem;
+}
+
+.ps{
+  margin-right: 5rem;
+  margin-top: 7rem;
+}
+
+.pFirst{
+  font-size: 20px;
+  font-family: 'Overpass Mono', monospace;
+  margin-bottom: -25px;
+  color: #9DA3A8;
+}
+
+.pSecond{
+  font-size: 60px;
+  font-family: 'Kaushan Script', cursive;
+  color: #0037ff;
+}

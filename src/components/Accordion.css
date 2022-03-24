@@ -13,11 +13,19 @@
   transition: all 0.6s cubic-bezier(1,0,1,0);
 }
 
+.article-show{
+  height: 23rem;
+  overflow: auto;
+}
+
+.article{
+  max-height: 0rem;
+}
+
 /*Accordion*/
 .section{
   display: flex;
   flex-direction: column;
-  width: 50rem;
 }
 
 /*Botoes(barras) para abrir e fechar o Accordion*/
@@ -25,17 +33,14 @@
   background-color: #00204a;
   color: white;
   cursor: pointer;
-  padding: 1.125rem;
-  margin: 0.5rem 0rem;
+  padding: 1.425rem;
+  margin: 0.3rem 16rem;
   display: flex;
   align-items: center;
   border: none;
   border-radius: 3px;
   outline: none;
   height: 2.5rem;
-
-/*   margin-inline-start: 200px;
-  margin-inline-end: 200px; */
 }
 
 /*cor de fundo para o botão se for clicado*/
