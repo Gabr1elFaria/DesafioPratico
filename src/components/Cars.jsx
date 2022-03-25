@@ -1,39 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import api from '../services/api'
+import React, { useState, useEffect } from "react";
+import api from "../services/api";
 
-import './Cars.css'
+import "./Cars.css";
 
-function Cars (props) {
-  
+function Cars(props) {
   const [cars, setCars] = useState([]);
-  
+
   useEffect(() => {
     (async () => {
-      const response = await api.get('/carros/marcas');
+      const response = await api.get("/carros/marcas");
       setCars(response.data);
     })();
-  })
+  });
 
-  let marcasCarro = [];
-  marcasCarro = cars.map(function(cars){
-    return marcasCarro = cars.nome;
-  })
+  let carBrand = {};
+  carBrand = cars.map(function (cars) {
+    return (carBrand = cars);
+  });
 
   return (
-    <div  className={props.setSelected}>
-      {marcasCarro.map((Carro) => (
-        <div>
-          <ul>
-            <li>{Carro}</li>
-          </ul>
-        </div>
-      ))}
+    <div className="container">
+      <div className={props.setSelected}>
+        {carBrand.map((Carro) => (
+          <div className="list">
+            <a className="a-list" href="">
+              {Carro.nome.toLowerCase()}
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-
-  };
+  );
+}
 
 export default Cars;
-
-
-      

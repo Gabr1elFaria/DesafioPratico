@@ -14,23 +14,31 @@ function Motorcycle (props) {
     })();
   })
 
-  let marcasMotos = [];
-  marcasMotos = motorcycle.map(function(motorcycle){
-    return marcasMotos = motorcycle.nome.toLowerCase();
+  let motBrand = {};
+  motBrand = motorcycle.map(function(motorcycle){
+    return motBrand = motorcycle;
+  })
+
+  let lowerCased = [];
+
+  lowerCased = motBrand.map(function(motorcycle){
+    return lowerCased = motorcycle.nome.toLowerCase()
   })
 
 
 
   return (
-      <div  className={props.setSelected}>
-        {marcasMotos.map((Moto) => (
-          <div>
-            <ul>
-              <li>{Moto}</li>
-            </ul>
-          </div>
-        ))}
-      </div>
+    <div className="container">
+    <div  className={props.setSelected}>
+    {lowerCased.map((Moto) => (
+        <div className="list">
+          <a className="a-list" href="">
+            {Moto}
+          </a>
+        </div>
+      ))}
+    </div>
+    </div>
   )
 
   };

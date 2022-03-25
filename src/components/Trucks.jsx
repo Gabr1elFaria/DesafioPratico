@@ -15,20 +15,28 @@ function Trucks (props) {
     })();
   })
 
-  let marcasCaminhao = [];
-  marcasCaminhao = trucks.map(function(trucks){
-    return marcasCaminhao = trucks.nome.toLowerCase()
-  })
+  let truckBrand = {};
+  truckBrand = trucks.map(function (trucks) {
+    return (truckBrand = trucks);
+  });
+
+  let lowerCased = [];
+
+  lowerCased = truckBrand.map(function (trucks) {
+    return (lowerCased = trucks.nome.toLowerCase());
+  });
   
   return(
-    <div  className={props.setSelected}>
-      {marcasCaminhao.map((Caminhao) => (
-        <div>
-          <ul>
-            <li>{Caminhao}</li>
-          </ul>
-        </div>
-      ))}
+    <div className="container">
+      <div className={props.setSelected}>
+        {lowerCased.map((Caminhao) => (
+          <div className="list">
+            <a className="a-list" href="">
+              {Caminhao}
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

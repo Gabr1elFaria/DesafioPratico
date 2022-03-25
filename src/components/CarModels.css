@@ -1,12 +1,15 @@
 .container{
   display: flex;
   flex-direction: column;
-  margin-left: 16rem;
 }
 
-.list{
+ul{
+ list-style-type: none;
  margin: 0.8rem 1.5rem;
- text-transform: capitalize;
+}
+
+ul li{
+ color: black;
 }
 
 ::-webkit-scrollbar-track{
@@ -20,15 +23,3 @@
  background: #dad7d7;
 }
 
-.a-list{
- color: blue;
- text-decoration: none;
-}
-
-.a-list:hover{
- color: rgb(51, 6, 104);
-}
-
-.a-list:visited{
- text-decoration: none;
-}

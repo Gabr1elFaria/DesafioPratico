@@ -21,10 +21,12 @@ export default function Accordion (props) {
 
 return(
   <div className="section">
-  <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
+  <a href='#button'>
+  <button id="button" className={`accordion ${setActive}`} onClick={toggleAccordion}>
     <p className="title">{props.title}</p>
     <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
   </button>
+  </a>
   <article className={`${setShow}`}>
   <div><Trucks setSelected={`${setSelected}`} /></div>
   </article>
