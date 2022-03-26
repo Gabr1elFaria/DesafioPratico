@@ -62,3 +62,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 # API consumption
 For API consumption, the project uses the Axios HTTP client. It can be installed with the command "npm install axios".
 For other installation ways and how to use: https://www.npmjs.com/package/axios
+
+# Navigation between pages
+We use React Router Dom version 6. It can be installed with the command "npm install react-router-dom@6".
+For other installation ways and how to use check it out the official documentation: https://reactrouter.com/docs/en/v6/getting-started/installation
