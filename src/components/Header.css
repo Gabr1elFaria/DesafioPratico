@@ -17,3 +17,10 @@
 .a-header:visited{
   text-decoration: none;
 }
+
+.image{
+  width: 1.3rem;
+  height: 1.3rem;
+  float: left;
+  margin-left: 1rem;
+}

@@ -25,9 +25,6 @@ export default function Accordion(props) {
         <p className="title">{props.title}</p>
         <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
       </button>
-      <article className={`${setShow}`}>
-        <div></div>
-      </article>
     </div>
   );
 }

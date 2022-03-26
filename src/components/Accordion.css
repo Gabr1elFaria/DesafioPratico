@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
 
+html{
+  scroll-behavior: smooth;
+}
+
 .content{
   color: #8b7f75;
   max-height: 0;
   overflow: hidden;
-  /* transition: all 0.6s cubic-bezier(0,1,0,1); */
+  transition: all 0.6s cubic-bezier(0,1,0,1);
 }
 
 .content.show{
   height: auto;
   max-height: 9999px;
-  /* transition: all 0.6s cubic-bezier(1,0,1,0); */
+  transition: all 0.6s cubic-bezier(1,0,1,0);
 }
 
 .article-show{
@@ -18,12 +22,12 @@
   overflow: auto;
   width: 79vw;
   margin-left: 1vw;
-  transition: all 0.6s cubic-bezier(0,1,0,1);
+  transition: all 0.5s cubic-bezier(0,1,0,1);
 }
 
 .article{
   max-height: 0rem;
-  transition: all 0.6s cubic-bezier(1,0,1,0);
+  transition: all 0.1s cubic-bezier(1,0,1,0);
 }
 
 .a-button{
@@ -51,6 +55,7 @@
   border-radius: 3px;
   outline: none;
   height: 2.5rem;
+  z-index: 1;
 }
 
 /*cor de fundo para o botão se for clicado*/

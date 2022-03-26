@@ -1,44 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import api from '../services/api'
+import React, { useState, useEffect } from "react";
+import { NavLink as Link } from "react-router-dom";
+import api from "../services/api";
 
-import './Trucks.css'
+import "./MainComponents.css";
 
-function Trucks (props) {
-
-
+function Trucks(props) {
   const [trucks, setTrucks] = useState([]);
 
   useEffect(() => {
     (async () => {
-      const response = await api.get('/caminhoes/marcas');
+      const response = await api.get("/caminhoes/marcas");
       setTrucks(response.data);
     })();
-  })
+  }, []);
 
   let truckBrand = {};
   truckBrand = trucks.map(function (trucks) {
     return (truckBrand = trucks);
   });
 
-  let lowerCased = [];
-
-  lowerCased = truckBrand.map(function (trucks) {
-    return (lowerCased = trucks.nome.toLowerCase());
-  });
-  
-  return(
+  return (
     <div className="container">
       <div className={props.setSelected}>
-        {lowerCased.map((Caminhao) => (
-          <div className="list">
-            <a className="a-list" href="">
-              {Caminhao}
-            </a>
-          </div>
-        ))}
+        <ul className="list">
+          {truckBrand.map((truck) => {
+            return (
+              <li className="li-list" key={truck.codigo}>
+                <Link to={`/truckModels/${truck.codigo}`}>
+                  <span>{truck.nome.toLowerCase()}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default Trucks;

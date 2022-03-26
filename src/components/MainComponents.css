@@ -1,22 +1,21 @@
-ul{
-  list-style-type: none;
-  margin: 0.8rem 1rem;
-  padding-left: 16rem;
-}
-
-
-li{
-  color: black;
-  text-transform: capitalize;
-}.container{
+.container{
   display: flex;
   flex-direction: column;
   margin-left: 16rem;
 }
 
-.list{
+.li-list{
+ list-style: none;
  margin: 0.8rem 1.5rem;
  text-transform: capitalize;
+}
+
+span{
+ text-decoration: none;
+ color: #00204a;
+}
+span:visited{
+ color: #00204a;
 }
 
 ::-webkit-scrollbar-track{
@@ -30,15 +29,6 @@ li{
  background: #dad7d7;
 }
 
-.a-list{
+span:hover{
  color: blue;
- text-decoration: none;
-}
-
-.a-list:hover{
- color: rgb(51, 6, 104);
-}
-
-.a-list:visited{
- text-decoration: none;
 }

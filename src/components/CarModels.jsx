@@ -1,18 +1,19 @@
 import React, { useState, useEffect} from "react";
 import api from "../services/api";
+import { useParams } from "react-router-dom";
 
-import './CarModels.css';
+import "./MainModels.css";
 
-export default function(props){
-
+function CarModels(props) {
   const [models, setModels] = useState([]);
+  const { idBrandCar } = useParams();
   
   useEffect(() => {
     (async () => {
-      const response = await api.get('/carros/marcas/59/modelos');
+      const response = await api.get(`/carros/marcas/${idBrandCar}/modelos`);
       setModels(response.data.modelos);
     })();
-  })
+  },[])
 
 
    let names = {};
@@ -20,25 +21,29 @@ export default function(props){
     return names = models;
   })
 
-  let carsName = {};
+  let cars = {};
 
-  carsName = names.map(function(car){
-    return carsName = car.nome
-  })
+  cars = names.map(function (car) {
+    return (cars = car.nome);
+  });
  
-  carsName.reverse();
+  cars.reverse();
 
   return (
-    <div className='container'>
-      <div className={props.setSelected}>
-      {carsName.map((Carro) => (
-        <div>
-          <ul>
-            <li>{Carro}</li>
-          </ul>
-        </div>
-      ))}
-    </div>
+    <div>
+    <article className="flexbox">
+      <div className="box">
+          {cars.map((car) => (
+            <div>
+              <ul className="lista">
+                <li  className="li-lista">{car}</li>
+              </ul>
+            </div>
+          ))}
+      </div>
+    </article>
     </div>
   );
 }
+
+export default CarModels;

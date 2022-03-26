@@ -1,49 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import api from '../services/api'
+import React, { useState, useEffect } from "react";
+import { NavLink as Link } from "react-router-dom";
+import api from "../services/api";
 
-import './Motorcycles.css'
+import "./MainComponents.css";
 
-function Motorcycle (props) {
-  
+function Motorcycle(props) {
   const [motorcycle, setMotorcycle] = useState([]);
-  
+
   useEffect(() => {
     (async () => {
-      const response = await api.get('/motos/marcas');
+      const response = await api.get("/motos/marcas");
       setMotorcycle(response.data);
     })();
-  })
+  },[]);
 
   let motBrand = {};
-  motBrand = motorcycle.map(function(motorcycle){
-    return motBrand = motorcycle;
-  })
-
-  let lowerCased = [];
-
-  lowerCased = motBrand.map(function(motorcycle){
-    return lowerCased = motorcycle.nome.toLowerCase()
-  })
-
-
+  motBrand = motorcycle.map(function (motorcycle) {
+    return (motBrand = motorcycle);
+  });
 
   return (
     <div className="container">
-    <div  className={props.setSelected}>
-    {lowerCased.map((Moto) => (
-        <div className="list">
-          <a className="a-list" href="">
-            {Moto}
-          </a>
-        </div>
-      ))}
+      <div className={props.setSelected}>
+        <ul className="list">
+          {motBrand.map((motorcycle) => {
+            return (
+              <li className="li-list" key={motorcycle.codigo}>
+                <Link to={`/motorcycleModels/${motorcycle.codigo}`}>
+                  <span>{motorcycle.nome.toLowerCase()}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
-    </div>
-  )
-
-  };
+  );
+}
 
 export default Motorcycle;
-
-
-      
