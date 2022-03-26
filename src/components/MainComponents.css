@@ -32,3 +32,18 @@ span:visited{
 span:hover{
  color: blue;
 }
+
+@media screen and (max-width:500px){
+  .container{
+    margin-left: 10rem;
+  }
+  ::-webkit-scrollbar{
+    margin-right: -5rem;
+  }
+}
+
+@media screen and (max-width: 400px){
+  ::-webkit-scrollbar{
+    margin-right: -10rem;
+  }
+}

@@ -38,3 +38,24 @@
   font-family: 'Kaushan Script', cursive;
   color: #0037ff;
 }
+
+@media screen and (max-width:700px){
+  .img{
+    display: none;
+  }
+  .ps{
+    margin-top: 5rem;
+    height: 8rem;
+    margin-left: 4rem;
+  }
+  .pFirst{
+    font-size: 20px;
+    margin-bottom: 1px;
+    margin-top: -1rem;
+  }
+  .pSecond{
+    font-size: 30px;
+    font-size: 50px;
+    margin-left: -10px;
+  }
+}

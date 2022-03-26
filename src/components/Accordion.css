@@ -89,3 +89,16 @@ html{
   font-size: 1rem;
   padding: 1.125rem;
 }
+
+@media screen and (max-width:1100px){
+  .article-show{
+    margin-left: -2rem;
+  }
+}
+
+
+@media screen and (max-width:900px){
+  .article-show{
+    margin-left: -4rem;
+  }
+}
