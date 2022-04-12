@@ -1,5 +1,4 @@
-# DesafioPratico
-Desafio Prático para a vaga de estágio - Doutor Multas
+Desafio Prático para uma vaga de estágio. Objetivo: Consumir uma API e mostrar os dados da API utilizando React
 
 # Getting Started with Create React App
 This project was bootstrapped with Create React App.
